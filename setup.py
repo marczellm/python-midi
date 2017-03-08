@@ -35,8 +35,8 @@ def configure_platform():
     ns = __base__.copy()
     # currently, only the ALSA sequencer is supported
     if platform.startswith('linux'):
-        setup_alsa(ns)
-        pass
+        # setup_alsa(ns)
+        print("Skipping ALSA setup")
     else:
         print("No sequencer available for '%s' platform." % platform)
     return ns
